@@ -3,7 +3,12 @@ function teamHTML(data) {
         if(data[i].getRole() === 'Manager') {
             return `<div class="card">
         <h2>${data[i].getName()}</h2>
-        <p>${data[i].getRole()}</p>
+        <h3>${data[i].getRole()}</h3>
+        <div>
+        </div>
+        <p>${data[i].getId()}</p>
+        <p>${data[i].getEmail()}</p>
+        <p>${data[i].getOfficeNumber()}</p>
         </div>`
         }
         if(data[i].getRole() === 'Engineer') {
@@ -12,12 +17,20 @@ function teamHTML(data) {
         <h3>${data[i].getRole()}</h3>
         <div>
         </div>
+        <p>${data[i].getId()}</p>
+        <p>${data[i].getEmail()}</p>
+        <p>${data[i].getGithub()}</p>
         </div>`
         }
         if(data[i].getRole() === 'Intern') {
             return `<div class="card">
         <h2>${data[i].getName()}</h2>
-        <p>${data[i].getRole()}</p>
+        <h3>${data[i].getRole()}</h3>
+        <div>
+        </div>
+        <p>${data[i].getId()}</p>
+        <p>${data[i].getEmail()}</p>
+        <p>${data[i].getSchool()}</p>
         </div>`
         }
     }
