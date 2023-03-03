@@ -1,39 +1,44 @@
 function teamHTML(data) {
+    var teamCards = "";
     for(i = 0; i < data.length; i++) {
         if(data[i].getRole() === 'Manager') {
-            return `<div class="card">
+            // teamCards+= -> teamCards = teamCards + ""
+            teamCards+= `<div class="card">
         <h2>${data[i].getName()}</h2>
         <h3>${data[i].getRole()}</h3>
         <div>
-        </div>
         <p>${data[i].getId()}</p>
         <p>${data[i].getEmail()}</p>
         <p>${data[i].getOfficeNumber()}</p>
+        </div>
         </div>`
         }
+
         if(data[i].getRole() === 'Engineer') {
-            return `<div class="card">
+            teamCards+= `<div class="card">
         <h2>${data[i].getName()}</h2>
         <h3>${data[i].getRole()}</h3>
         <div>
-        </div>
         <p>${data[i].getId()}</p>
         <p>${data[i].getEmail()}</p>
         <p>${data[i].getGithub()}</p>
+        </div>
         </div>`
         }
+        
         if(data[i].getRole() === 'Intern') {
-            return `<div class="card">
+            teamCards+= `<div class="card">
         <h2>${data[i].getName()}</h2>
         <h3>${data[i].getRole()}</h3>
         <div>
-        </div>
         <p>${data[i].getId()}</p>
         <p>${data[i].getEmail()}</p>
         <p>${data[i].getSchool()}</p>
+        </div>
         </div>`
         }
     }
+    return teamCards;
 }
 
 
