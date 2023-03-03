@@ -103,7 +103,8 @@ function createIntern() {
 
 function buildTeam() {
     // renderTeam(teamMembers);
-    fs.writeFileSync("./dist/index.html", renderTeam(teamMembers))
+    fs.writeFileSync("./dist/Team.html", renderTeam(teamMembers));
+    console.log("Team.html created!");
 }
 
 function init() {
