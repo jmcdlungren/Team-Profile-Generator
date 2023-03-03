@@ -1,6 +1,8 @@
 function teamHTML(data) {
     var teamCards = "";
+    // Creates loop for each data piece within the array created by the questions
     for(i = 0; i < data.length; i++) {
+      // If the role of "Manager" is selected, then the following HTML is created with each data piece filled into the HTML
         if(data[i].getRole() === 'Manager') {
             // teamCards+= -> teamCards = teamCards + ""
             teamCards+= `<div class="p-3 m-2 card shadow bg-secondary bg-opacity-25 border border-primary" style="width: 18rem;">
@@ -15,7 +17,7 @@ function teamHTML(data) {
         </div>
         </div>`
         }
-
+        // // If the role of "Engineer" is selected, then the following HTML is created with each data piece filled into the HTML
         if(data[i].getRole() === 'Engineer') {
             teamCards+= `<div class="p-3 m-2 card shadow bg-secondary bg-opacity-25 border border-primary" style="width: 18rem;">
         <div class="card p-3 mb-2 bg-primary bg-opacity-75 text-white border border-primary">
@@ -29,7 +31,7 @@ function teamHTML(data) {
         </div>
         </div>`
         }
-        
+        // // If the role of "Intern" is selected, then the following HTML is created with each data piece filled into the HTML
         if(data[i].getRole() === 'Intern') {
             teamCards+= `<div class="p-3 m-2 card shadow bg-secondary bg-opacity-25 border border-primary" style="width: 18rem;">
         <div class="card p-3 mb-2 bg-primary bg-opacity-75 text-white border border-primary">
@@ -47,7 +49,7 @@ function teamHTML(data) {
     return teamCards;
 }
 
-
+// This creates an HTML base to start from to have the "team" data fill in
 function renderTeam(team) {
     console.log(team)
     return `<!DOCTYPE html>

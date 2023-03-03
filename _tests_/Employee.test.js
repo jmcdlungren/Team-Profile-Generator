@@ -1,10 +1,13 @@
+// Creates variable to bring in the file "Employee.js" to test
 const Employee = require('../lib/Employee');
 
 describe('Employee class', () => {
+    // This begins the test with a variable filling in all details matching that of the Employee class
     const employee = new Employee('Bob', '123456', 'Bob@email.com');
     it('Returns the name from the input', () => {
+        // This creates a variable to test
         const employeeName = employee.getName('Bob');
-
+        // This test confirms if the variable to test matches the expected value
         expect(employeeName).toBe('Bob');
     })
     it('Returns the id from the input', () => {

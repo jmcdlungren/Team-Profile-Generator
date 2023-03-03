@@ -1,13 +1,14 @@
-const Employee = require('./lib/Employee.js');
+// Creates variables to bring in the necessary files / programs
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
 const renderTeam = require('./src/TeamBuilder.js');
 const inquirer = require('inquirer');
 const fs = require('fs');
+// Creates an array to be filled in with the questions below
 const teamMembers = [];
 
-
+// Each of the below "create" functions create prompts that will show in the terminal when "node index" is run to fill in the necessary details of each role.
 function createManager() {
     inquirer
         .prompt([
@@ -101,12 +102,14 @@ function createIntern() {
         .then(() => init())
 }
 
+// This creates the HTML file, pulling from the TeamBuilder.js file
 function buildTeam() {
     // renderTeam(teamMembers);
     fs.writeFileSync("./dist/Team.html", renderTeam(teamMembers));
     console.log("Team.html created!");
 }
 
+// This creates the prompt to determine which role needs to be added to the team, or if the user is done building their team. Once a role is selected, then the above "create" functions are declared to fill in the respective details. If the user chooses to finish, then the above "buildTeam" function is called to create the HTML file.
 function init() {
     inquirer
         .prompt([
@@ -137,5 +140,5 @@ function init() {
         })
 }
 
-
+// This calls the "init" function, which begins and ends the prompts
 init();
