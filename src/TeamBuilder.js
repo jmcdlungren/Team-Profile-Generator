@@ -9,7 +9,9 @@ function teamHTML(data) {
         if(data[i].getRole() === 'Engineer') {
             return `<div class="card">
         <h2>${data[i].getName()}</h2>
-        <p>${data[i].getRole()}</p>
+        <h3>${data[i].getRole()}</h3>
+        <div>
+        </div>
         </div>`
         }
         if(data[i].getRole() === 'Intern') {
