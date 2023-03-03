@@ -13,7 +13,7 @@ describe('Employee class', () => {
         expect(employeeID).toEqual('123456');
     })
     it('Returns the email from the input', () => {
-        const employeeEmail = employee.getEmail('Bob@email.com')
+        const employeeEmail = employee.getEmail('Bob@email.com');
 
         expect(employeeEmail).toBe('Bob@email.com');
     })

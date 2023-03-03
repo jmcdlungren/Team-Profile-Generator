@@ -13,7 +13,7 @@ describe('Manager class', () => {
         expect(managerID).toEqual('123456');
     })
     it('Returns the email from the input', () => {
-        const managerEmail = manager.getEmail('Tom@email.com')
+        const managerEmail = manager.getEmail('Tom@email.com');
 
         expect(managerEmail).toBe('Tom@email.com');
     })
