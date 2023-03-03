@@ -4,7 +4,7 @@ function teamHTML(data) {
         if(data[i].getRole() === 'Manager') {
             // teamCards+= -> teamCards = teamCards + ""
             teamCards+= `<div class="card">
-        <h2>${data[i].getName()}</h2>
+        <h2>☕${data[i].getName()}</h2>
         <h3>${data[i].getRole()}</h3>
         <div>
         <p>${data[i].getId()}</p>
@@ -16,7 +16,7 @@ function teamHTML(data) {
 
         if(data[i].getRole() === 'Engineer') {
             teamCards+= `<div class="card">
-        <h2>${data[i].getName()}</h2>
+        <h2>🕶${data[i].getName()}</h2>
         <h3>${data[i].getRole()}</h3>
         <div>
         <p>${data[i].getId()}</p>
@@ -28,7 +28,7 @@ function teamHTML(data) {
         
         if(data[i].getRole() === 'Intern') {
             teamCards+= `<div class="card">
-        <h2>${data[i].getName()}</h2>
+        <h2>👨‍🎓${data[i].getName()}</h2>
         <h3>${data[i].getRole()}</h3>
         <div>
         <p>${data[i].getId()}</p>
